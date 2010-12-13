@@ -1,5 +1,5 @@
 package Ark::Plugin::Authentication::User;
-use Mouse;
+use Any::Moose;
 
 has obj => (
     is      => 'rw',
@@ -43,4 +43,5 @@ sub for_session {
     };
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
+

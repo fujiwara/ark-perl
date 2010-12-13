@@ -48,4 +48,4 @@ sub authenticate { }
 sub find_user { }
 sub from_session { }
 
-1;
+__PACKAGE__->meta->make_immutable;
